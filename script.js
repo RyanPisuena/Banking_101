@@ -1,8 +1,25 @@
 var customer_name;
 var balance;
+let email = "Pisuenaryan@gmail.com";
+let password = "password";
 
+const testbutton = document.querySelector("#submit_button");
 
-function openAccount(name, value=0) {
+testbutton.addEventListener('click', function(){
+  let userInput = document.querySelector("login-nav");
+
+  let userEmail = document.getElementById('exampleInputEmail2').value;
+  let userPassword = document.getElementById('exampleInputPassword2').value;
+  console.log(userEmail);
+  console.log(userPassword);
+
+  if (userEmail == email && userPassword == password)
+    {
+      window.location.href = 'http://www.google.com';;
+    }
+});
+
+function openAccount(name, value = 0) {
   balance = value;
   // Set the value for customer_name equal to name below
   customer_name = name;
